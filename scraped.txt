@@ -1,0 +1,3 @@
+List of all the links that are already scraped and cleaned
+-----------------------------------------------------------
+https://www.nvcc.edu/transfer/faq/
