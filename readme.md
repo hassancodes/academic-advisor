@@ -3,15 +3,7 @@ Revolutionalizing the way academic advising is done.
 
 
 ----------------------------------------------------
-# DataStorage for Training
-
-pattern: 
-{
-    QnAs : {
-    {question:answer},
-    {question:answer}
-    {question:answer}
-    {question:answer}
-
-}
-}
+# currently working on
+* Collecting more and more data
+* Testing and finding the right training model
+  
