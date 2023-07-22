@@ -1,3 +1,7 @@
 List of all the links that are already scraped and cleaned
 -----------------------------------------------------------
-https://www.nvcc.edu/transfer/faq/
+    "https://online.nvcc.edu/faqs.html",
+    "https://www.nvcc.edu/medical/apply/steps/faq.html",
+    "https://www.nvcc.edu/campus-auxiliary-services/faq.html",
+    "https://online.nvcc.edu/testinginfo.html",
+    "https://online.nvcc.edu/fservices/index.html"
