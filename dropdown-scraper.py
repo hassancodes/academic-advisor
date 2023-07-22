@@ -15,11 +15,6 @@ targetlinks = [
     "https://www.nvcc.edu/transcripts/faq.html"]
 
 
-# total 54 panesl on this link 
-# first we will get all the title of questions
-# then their answers, next will will make them in a json file
-questions_list =[]
-answer_list = []
 currentlink = "https://www.nvcc.edu/transcripts/faq.html"
 req = requests.get(currentlink)
 soup = BeautifulSoup(req.content, "lxml")
@@ -42,9 +37,6 @@ for i in range(1,40):
     else: 
         answer = str(unicodedata.normalize("NFKD",answer.text.strip()).replace("\n","")).encode("ascii","ignore").decode().replace('\"',"'")
         
-    
-#     question = soup.find("a",{"href":string})
-#     answer = soup.find("div",{'id':string[1:]}).text
     # question =  str(unicodedata.normalize("NFKD",soup.find("a",{"href":string}).text.strip()).replace("\n","")).encode("ascii","ignore").decode().replace('\"',"'")
     # answer = str(unicodedata.normalize("NFKD",soup.find("div",{'id':string[1:]}).text.strip()).replace("\n","")).encode("ascii","ignore").decode().replace('\"',"'")
     if len(mydict)==0:
@@ -52,8 +44,7 @@ for i in range(1,40):
     elif (len(mydict)==1):
         mydict[currentlink].update({question:answer})
         
- 
-# print(mydict)  
+  
 with open("faqs.json", "r+") as fp:
     a = json.load(fp)
     a.update(mydict)
