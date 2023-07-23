@@ -22,23 +22,25 @@ links = [
 questionlist=[]
 answerlist=[]
 
-currentlink = "https://www.nvcc.edu/business-offices/faq.html"
+currentlink = "https://www.nvcc.edu/parking/faq.html"
 req = requests.get(currentlink)
 soup = BeautifulSoup(req.content, "lxml")
 mydict= {}
 for i in range(1,8):
     if len(questionlist)==0:
-       questionlist=[x.text for x in soup.find_all("span",{"class":"faq"})]
+       questionlist=[x.text for x in soup.find_all("a",{"class":"faq"})]
     else:pass
     
     string = f"faq{i}"
     rawQnA = soup.find("p",{"id":string})
     rawQnA.find("span").decompose()
     answer = rawQnA.text
+    question = str(unicodedata.normalize("NFKD",questionlist[i-1]).replace("\n","")).encode("ascii","ignore").decode().replace('\"',"'")
+    answer = str(unicodedata.normalize("NFKD",answer).replace("\n","")).encode("ascii","ignore").decode().replace('\"',"'")
     if len(mydict)==0:
-        mydict[currentlink]={questionlist[i-1]:answer}
+        mydict[currentlink]={question:answer}
     else: 
-        mydict[currentlink].update({questionlist[i-1]:answer})
+        mydict[currentlink].update({question:answer})
 
 print(mydict)
 
@@ -53,3 +55,9 @@ print(mydict)
     #     mydict[currentlink].update({question:answer})
 
 
+
+
+# with open("faqs.json", "r+") as fp:
+#     a = json.load(fp)
+#     a.update(mydict)
+#     json.dump(a,fp)
