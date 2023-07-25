@@ -7,3 +7,5 @@ Revolutionalizing the way academic advising is done.
 * Collecting more and more data
 * Testing and finding the right training model
   
+* 200 Questions Scraped 
+* Continuously training on questions and their appropriate answers.
