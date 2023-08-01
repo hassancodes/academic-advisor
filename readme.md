@@ -9,3 +9,7 @@ Revolutionalizing the way academic advising is done.
   
 * 200 Questions Scraped 
 * Continuously training on questions and their appropriate answers.
+
+## Tested AI models 
+* falcon7b
+* falcon40
