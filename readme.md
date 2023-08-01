@@ -13,3 +13,5 @@ Revolutionalizing the way academic advising is done.
 ## Tested AI models 
 * falcon7b
 * falcon40
+
+# Currently working on finding the right model to train my text.
