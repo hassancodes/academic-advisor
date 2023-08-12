@@ -15,3 +15,4 @@ Revolutionalizing the way academic advising is done.
 * falcon40
 
 # Currently working on finding the right model to train my text.
+- I am literally confused, since I am new to AI stuff
