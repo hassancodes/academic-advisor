@@ -22,3 +22,4 @@ Revolutionalizing the way academic advising is done.
 - I am literally confused, since I am new to AI stuff
 - Just found google collab, got free 107gb storage. lol will work with the next few days
 
+Not working currently
